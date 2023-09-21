@@ -1,0 +1,14 @@
+<div class="odometer">
+
+  <h3>Reading : {{ reading }}</h3>
+  <input name="odoemeter" type="number" [(ngModel)]="reading">
+  <button (click)="setReading(reading)">Submit</button>
+  <button (click)="decrementReading()">Decrement</button>
+  <button (click)="incrementReading()">Increment</button>
+  <button (click)="reset()">Reset</button>
+  <br>
+  <div *ngIf="message">
+    <p>{{getMsg()}}</p>
+  </div>
+</div>
+
